@@ -1,0 +1,17 @@
+[package]
+name = "vterm-emulator"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+bitflags = { version = "2.4", features = ["serde"] }
+unicode-width = { workspace = true }
+vte = { workspace = true }
+encoding_rs = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

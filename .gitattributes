@@ -1,0 +1,24 @@
+# Line-ending policy: rustfmt is configured with newline_style = "Unix",
+# so Rust sources are LF in the working tree on every platform. Declaring
+# it here keeps `git status` honest when core.autocrlf=true would
+# otherwise expect CRLF and mark every fmt-touched file modified.
+
+* text=auto
+
+# Rust sources: LF everywhere (rustfmt newline_style = "Unix").
+*.rs text eol=lf
+
+# Shell scripts: LF (Git Bash / WSL / macOS / Linux).
+*.sh text eol=lf
+
+# Misc config/docs: LF.
+*.toml text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binaries: never normalize.
+*.png  binary
+*.ico  binary
+*.dll  binary
+*.exe  binary
